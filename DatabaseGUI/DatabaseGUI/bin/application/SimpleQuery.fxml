@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minWidth="-1.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SimpleQueryController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label layoutX="180.0" layoutY="2.0" prefHeight="45.0" prefWidth="223.0" text="Simple Quary">
+      <font>
+        <Font size="35.0" />
+      </font>
+    </Label>
+    <Label layoutX="5.0" layoutY="329.0" prefHeight="22.0" prefWidth="121.0" text="WHERE:">
+      <font>
+        <Font size="16.0" fx:id="x1" />
+      </font>
+    </Label>
+    <TextField fx:id="where" layoutX="68.0" layoutY="329.0" prefHeight="25.0" prefWidth="523.0" />
+    <Button fx:id="sendQuaryButton" layoutX="225.0" layoutY="359.0" mnemonicParsing="false" onAction="#sendQuary" prefHeight="35.0" prefWidth="121.0" text="Send Quary" />
+    <Button fx:id="mainMenuButton" layoutX="23.0" layoutY="5.0" mnemonicParsing="false" onAction="#backToMainMenu" prefHeight="35.0" prefWidth="103.5" text="Main Menu" />
+    <!-- <ComboBox layoutX="161.0" layoutY="121.0" prefHeight="25.0" prefWidth="86.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+        </FXCollections>
+      </items>
+    </ComboBox> -->
+    <Label fx:id="instructions" font="$x1" layoutX="14.0" layoutY="45.0" prefHeight="79.0" prefWidth="577.0" text="Please click on &quot;show tables&quot; in order to view the available tables." />
+    <TextArea fx:id="output" editable="false" layoutX="2.0" layoutY="150.0" prefHeight="146.0" prefWidth="107.0" wrapText="true" />
+    <VBox fx:id="vBox" layoutX="448.0" layoutY="114.0" prefHeight="200.0" prefWidth="100.0">
+      <children>
+        <Label prefWidth="86.0" />
+      </children>
+    </VBox>
+      <Button fx:id="tablesBtn" layoutX="8.0" layoutY="121.0" mnemonicParsing="false" onAction="#getTables" prefHeight="25.0" prefWidth="86.0" text="show tables" />
+      <Button fx:id="columnsBtn" layoutX="115.0" layoutY="122.0" mnemonicParsing="false" onAction="#getColumns" prefHeight="25.0" prefWidth="136.0" text="show columns of table" />
+      <TextField fx:id="tableNumberTextField" layoutX="204.0" layoutY="151.0" prefHeight="25.0" prefWidth="44.0" />
+      <Label layoutX="123.0" layoutY="155.0" prefHeight="17.0" prefWidth="86.0" text="table number:" />
+      <TextArea fx:id="columnsOutput" editable="false" layoutX="116.0" layoutY="179.0" prefHeight="116.0" prefWidth="136.0" />
+      <TextArea fx:id="queryAnswerOutput" editable="false" layoutX="262.0" layoutY="125.0" prefHeight="168.0" prefWidth="332.0" />
+      <TextField fx:id="chosenColsTxtField" layoutX="292.0" layoutY="300.0" prefHeight="25.0" prefWidth="299.0" />
+      <Label layoutX="6.0" layoutY="300.0" prefHeight="25.0" prefWidth="299.0" text="columns numbers (splitted by commas):">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+  </children>
+</AnchorPane>

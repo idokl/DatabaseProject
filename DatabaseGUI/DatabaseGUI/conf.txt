@@ -1,0 +1,3 @@
+jdbc:mysql://db4free.net:3306/db2017oyi
+db2017oyi
+database
